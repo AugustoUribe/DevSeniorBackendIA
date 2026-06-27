@@ -5,7 +5,7 @@ public class Validador {
     public static int leerEntero(Scanner sc, String mensaje) {
         while (true) {
             System.out.print(mensaje);
-            if (sc.hasNextInt()) {  //Aca ese hasNextInt esta preguntando si es entero! 
+            if (sc.hasNextInt()) {
                 int valor = sc.nextInt();
                 sc.nextLine();
                 return valor;
@@ -35,5 +35,3 @@ public class Validador {
         return sc.nextLine();
     }
 }
-
-

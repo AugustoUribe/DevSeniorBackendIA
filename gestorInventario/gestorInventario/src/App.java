@@ -15,7 +15,7 @@ public class App {
                     Operaciones.registrar(sc);
                     break;
                 case 2:
-                    Operaciones.ver();
+                    Operaciones.listar();
                     break;
                 case 3:
                     Operaciones.actualizarCantidad(sc);
