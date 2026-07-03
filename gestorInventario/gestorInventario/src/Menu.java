@@ -4,11 +4,11 @@ public class Menu {
 
     public static void mostrar() {
         System.out.println();
-        System.out.println("=== GESTOR DE INVENTARIO ===");
-        System.out.println("1. Registrar producto");
-        System.out.println("2. Listar inventario");
-        System.out.println("3. Actualizar cantidad");
-        System.out.println("4. Ver valor total");
+        System.out.println("=== GESTOR DE RESERVAS ===");
+        System.out.println("1. Agendar una Reserva");
+        System.out.println("2. Listar todas las Reservas");
+        System.out.println("3. Cancelar una Reserva");
+        System.out.println("4. Ver reporte del dia");
         System.out.println("5. Salir");
     }
 
