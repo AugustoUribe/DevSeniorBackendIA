@@ -1,0 +1,6 @@
+package com.JavaClasesSabados.gestor_productos.model;
+
+public enum Rol {
+    USER,
+    ADMIN
+}
