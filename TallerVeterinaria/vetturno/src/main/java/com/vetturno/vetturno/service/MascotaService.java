@@ -28,7 +28,8 @@ public class MascotaService {
 
         Propietario propietario = propietarioRepository
                 .findById(request.getPropietarioId())
-                .orElseThrow();
+                .orElseThrow(() ->
+                        new IllegalArgumentException("El propietario no existe"));
 
         Mascota mascota = new Mascota();
 
