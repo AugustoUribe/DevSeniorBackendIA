@@ -11,8 +11,11 @@ public class PropietarioRequest {
     @NotBlank(message = "El teléfono es obligatorio")
     private String telefono;
 
-    @Email(message = "El email debe tener un formato válido")
+    @Email(message = "El correo electrónico no es válido")
     private String email;
+
+    public PropietarioRequest() {
+    }
 
     public String getNombre() {
         return nombre;

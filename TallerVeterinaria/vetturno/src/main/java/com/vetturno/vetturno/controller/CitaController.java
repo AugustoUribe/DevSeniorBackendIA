@@ -24,16 +24,17 @@ public class CitaController {
     public ResponseEntity<CitaDTO> crear(
             @Valid @RequestBody CitaRequest request) {
 
-        CitaDTO cita = citaService.crear(request);
-
         return ResponseEntity
                 .status(HttpStatus.CREATED)
-                .body(cita);
+                .body(citaService.crear(request));
     }
 
     @GetMapping
     public ResponseEntity<List<CitaDTO>> listar() {
-        return ResponseEntity.ok(citaService.listar());
+
+        return ResponseEntity.ok(
+                citaService.listar()
+        );
     }
 
     @GetMapping("/veterinario/{id}")

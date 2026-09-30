@@ -24,15 +24,16 @@ public class VeterinarioController {
     public ResponseEntity<VeterinarioDTO> crear(
             @Valid @RequestBody VeterinarioRequest request) {
 
-        VeterinarioDTO veterinario = veterinarioService.crear(request);
-
         return ResponseEntity
                 .status(HttpStatus.CREATED)
-                .body(veterinario);
+                .body(veterinarioService.crear(request));
     }
 
     @GetMapping
     public ResponseEntity<List<VeterinarioDTO>> listar() {
-        return ResponseEntity.ok(veterinarioService.listar());
+
+        return ResponseEntity.ok(
+                veterinarioService.listar()
+        );
     }
 }

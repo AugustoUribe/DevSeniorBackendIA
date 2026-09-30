@@ -10,6 +10,9 @@ public class VeterinarioRequest {
     @NotBlank(message = "La especialidad es obligatoria")
     private String especialidad;
 
+    public VeterinarioRequest() {
+    }
+
     public String getNombre() {
         return nombre;
     }

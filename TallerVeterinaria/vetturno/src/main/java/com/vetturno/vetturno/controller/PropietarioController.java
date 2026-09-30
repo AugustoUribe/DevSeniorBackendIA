@@ -24,16 +24,16 @@ public class PropietarioController {
     public ResponseEntity<PropietarioDTO> crear(
             @Valid @RequestBody PropietarioRequest request) {
 
-        PropietarioDTO propietario = propietarioService.crear(request);
-
         return ResponseEntity
                 .status(HttpStatus.CREATED)
-                .body(propietario);
+                .body(propietarioService.crear(request));
     }
 
     @GetMapping
     public ResponseEntity<List<PropietarioDTO>> listar() {
 
-        return ResponseEntity.ok(propietarioService.listar());
+        return ResponseEntity.ok(
+                propietarioService.listar()
+        );
     }
 }

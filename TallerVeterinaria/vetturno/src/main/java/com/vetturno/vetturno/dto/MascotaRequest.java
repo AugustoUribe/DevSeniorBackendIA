@@ -16,6 +16,9 @@ public class MascotaRequest {
     @NotNull(message = "El propietario es obligatorio")
     private Long propietarioId;
 
+    public MascotaRequest() {
+    }
+
     public String getNombre() {
         return nombre;
     }

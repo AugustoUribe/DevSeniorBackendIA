@@ -1,5 +1,6 @@
 package com.vetturno.vetturno.dto;
 
+import jakarta.validation.constraints.Future;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
@@ -8,6 +9,7 @@ import java.time.LocalDateTime;
 public class CitaRequest {
 
     @NotNull(message = "La fecha y hora son obligatorias")
+    @Future(message = "La cita debe programarse para una fecha futura")
     private LocalDateTime fechaHora;
 
     @NotBlank(message = "El motivo es obligatorio")
@@ -18,6 +20,9 @@ public class CitaRequest {
 
     @NotNull(message = "El veterinario es obligatorio")
     private Long veterinarioId;
+
+    public CitaRequest() {
+    }
 
     public LocalDateTime getFechaHora() {
         return fechaHora;

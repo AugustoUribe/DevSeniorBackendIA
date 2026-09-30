@@ -24,16 +24,16 @@ public class MascotaController {
     public ResponseEntity<MascotaDTO> crear(
             @Valid @RequestBody MascotaRequest request) {
 
-        MascotaDTO mascota = mascotaService.crear(request);
-
         return ResponseEntity
                 .status(HttpStatus.CREATED)
-                .body(mascota);
+                .body(mascotaService.crear(request));
     }
 
     @GetMapping
     public ResponseEntity<List<MascotaDTO>> listar() {
 
-        return ResponseEntity.ok(mascotaService.listar());
+        return ResponseEntity.ok(
+                mascotaService.listar()
+        );
     }
 }
