@@ -1,0 +1,18 @@
+# Credenciales privadas
+secrets.properties
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Archivos compilados
+target/
+*.class
+
+# Configuración del IDE
+.idea/
+.vscode/
+
+# Archivos comprimidos de proyectos
+*.zip
